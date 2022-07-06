@@ -28,7 +28,7 @@ or
 ] add Pluto
 ```
 
-###Copy the Repository
+### Copy the Repository
 
 Next you have to have these files on your system. Do this with git clone. Information on this here <https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-clone>. Basically, you'll want to have git installed, and clone the repository.
 
@@ -54,10 +54,10 @@ Pluto.run()
 
 This will pull up the Pluto interface in your default browser, and you are ready to go. Now just navigate to the repository, and run the pluto notebooks. (They will default to your User Directory i.e. C:/Users/USERNAMEGOESHERE/Learn-Julia-With-Pluto/notebooks)
 
-##Questions, Suggestions, and Contact
+## Questions, Suggestions, and Contact
 
 Any questions, suggestions, or concerns should reach out to fogeljonathan@gmail.com . I'd appreciate any feedback (positive or negative), so that I can improve this repository and help Julia become more widespread.
 
-##Authors
+## Authors
 
 Jonathan Fogel - @fogeljonathan
