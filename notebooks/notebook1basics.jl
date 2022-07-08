@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.5
+# v0.19.9
 
 using Markdown
 using InteractiveUtils
@@ -12,9 +12,9 @@ Welcome to the Introductory Julia Pluto Notebook 1 - Basics. This notebook will 
 
 ## Printing Text
 
-Hi! Welcome to Julia. Let's begin at the classic starting point: print statements.
+Hi! Welcome to Julia. Let's begin at the classic starting point: print statements. In the context of programming languages, printing refers to a function that simply returns text back.
 
-In Julia, there are two common printing functions; print(), and println(), with the difference being that println() starts a new line after the argument.
+In Julia, there are two common printing functions; print(), and println(), with the latter starting a new line after the argument.
 
 For example: 
 ```
@@ -74,19 +74,15 @@ For instance the type "Number" has subtype "Int"(Short for Integer) and supertyp
 
 Some common types include:
 
-Int : Integer - ex. 1
-
-Float : Number with a decimal point - ex. 1.5 
-
-String : A string of letters or words - "Hello World"
-
-Bool : Either true or false, but can also be represented as 1 or 0
-
-Nothing : The type to describe emptyness, has no values associated with it
-
-Array : A chart of data - ex.[1 2 3 ; 4 5 6] 
-
-Vector : An Array that is only 1 dimensional - ex. [1,2,3]
+|Type|Description|Example|
+|:---|:---|:---|
+|Int|Integer|1 , 2 , 3|
+|Float|Number with a decimal place|0.5, 1.5, 2.0|
+|String|A string of letters and characters|"My name is Jonathan"|
+|Bool|Either true or false- can also be represented as 1 or 0|true, false|
+|Nothing|The type to describe emptyness, has no values associated with it|nothing|
+|Array|A multidimensional chart of data|[1 2 3 ;  4 5 6] |
+|Vector|An Array that is only 1 dimensional|[1,2,3]|
 
 Know that there are many different types in Julia, and it is possible to even create custom types, so this is not, by any means, a comprehensive list.
 
@@ -107,14 +103,29 @@ Below are some exercises to showcase Julia typing.
 """
 
 # ╔═╡ df05a4a7-66fd-4c7a-b22d-74a8c8ae6755
-begin
-	# For the following, guess the type, and then remove the pound symbol and check the answer by running the cell.
+#Guess the type, and then remove the pound symbol and check the answer by running the cell.
 
-	#typeof(true)
-	#typeof(10.5)
-	#typeof(10.0)
-	#typeof(1+1)
-end
+#typeof(true)
+
+# ╔═╡ 21d6f304-2f24-42bf-ac70-ac68a5f704a6
+#Guess the type, and then remove the pound symbol and check the answer by running the cell.
+
+#typeof(10.5)
+
+# ╔═╡ 23f16fd5-7abf-4ea6-b22c-f67ec47f8531
+#Guess the type, and then remove the pound symbol and check the answer by running the cell.
+
+#typeof(10.0)
+
+# ╔═╡ 982d4d67-c102-4dfb-a8d8-7f97719ee525
+#Guess the type, and then remove the pound symbol and check the answer by running the cell.
+
+#typeof(1+1)
+
+# ╔═╡ 1781d90a-8c96-4169-9d15-dbdc38272df2
+#Guess the type, and then remove the pound symbol and check the answer by running the cell.
+
+#typeof("5")
 
 # ╔═╡ 956405b2-611c-4fac-a620-313a8b27405d
 md"""
@@ -126,14 +137,14 @@ Julia makes variable definition extremely straightforward. Let's say you want to
 ```
 Julia> num_continents = 7
 ```
-But what good is a variable if you can't use it? Luckily, Julia makes reading the variable just as easy.
+But what good is a variable if you can't use it? Luckily, Julia makes reading the variable just as easy. Simple call the name of the variable, and its value will be returned.
 ```
 Julia> num_continents
 7
 ```
 Now say, for instance, a giant landmass appears in the middle of the sea. Besides total world crisis, that also has major implications on your continent count! We now have to add 1 to it.
 
-The syntax of this operation, and all the ways you could do it will be explained in a later notebook, but the following will do this or you. If you are new to programming, this may look unintuitive, but the way to think through it is that the right side of the equation will be fully completed, and then the variable on the left will be set to it.
+The syntax of this operation, although potentially straightforward, will be explained in a later notebook, but the following will update your count for you. If you are new to programming, this may look unintuitive, but the way to think through it is that the right side of the equation will be fully completed, and then the variable on the left will be set to it.
 ```
 Julia> num_continents = num_continents + 1
 Julia> num_continents
@@ -143,7 +154,117 @@ Below is an exercise to go over this information.
 """
 
 # ╔═╡ 7c8efad3-c8a8-4255-848b-98ab0f1dc505
+#Below, create a variable named siblings, and set it to the number of siblings you have.
 
+
+
+# ╔═╡ a5e12d09-7f33-498e-b665-445b4c652b4c
+#Now, call the variable, as shown in the previous tutorial, and be amazed as Julia returns the value you entered.
+
+
+
+# ╔═╡ 3ea31749-e88f-4649-a59c-d8c9bd57f66b
+md"""
+## Comparison Operators
+
+Comparison Operation is a term used to describe the very simple comparisons between two peices of data, and always returns a bool(remember from the "types" tutorial that a bool refers to either true or false). This is a very fancy way of describing operations that you are certainly already familiar with, like  < , > and = . Using comparison operations is very straightforward.
+
+|Operator|Meaning|Notes|
+|:---|:---|:---|
+|<|Less Than|For numericals only. Returns true if the left is less than the right.|
+|<=|Less Than or Equal To|For numericals only. Returns true if the left is less than or equal to the right.|
+|>|Greater Than| For numericals only. Returns true if the left is greater than the right.|
+|>=|Greater Than or Equal To|For numericals only. Returns true if the left is greater than or equal to the right.|
+|==|Equal To|Returns true if the left is the same exact data as the right.|
+|!=|Not Equal To|Returns true if the left is not the same exact data as the right.|
+
+For Example:
+```
+Julia> 1<1
+false
+
+Julia> 1<=1
+true
+
+Julia> "Example" == "Example"
+true
+
+Julia> "Example" != 6
+true
+```
+"""
+
+# ╔═╡ 6e593c4d-102b-4f35-a55f-eac79945ba32
+md"""
+## Logical Operators
+
+Logical Operation is a term used to describe boolean logic. Simply put, it describes the functions of "and" and "or." It compares two bools and outputs a bool. Below is a description of the logical operators.
+
+|Operator|Meaning|Notes|
+|:---|:---|:---|
+|&&|And|Returns true if both arguments are true.|
+|\|\||Or|Returns true if at least 1 arguments are true.|
+
+For Example:
+```
+Julia> true && false
+false
+
+Julia> true || false
+true
+```
+"""
+
+# ╔═╡ 111d3dff-6303-4ff7-8335-43aa333ec942
+md"""
+## Conditional Evaluators
+
+Here is when things get interesting. Conditional operators are the driving behind any logic you can write in Julia. The Conditional Evaluators are "if", "elseif", and "else." Below is a description of each.
+
+
+|Evaluator|Meaning|
+|:---|:---|
+|if|Evaluates a operator. If true, executes a code block.|
+|elseif|Used after an "if" that did not return true. Evaluates a operator. If true, executes a code block.|
+|else|Used after an "if" or an "elseif" that did not return true. Executes a code block.|
+
+Conditional operators introduce new formatting. You may have noticed the idea of a "code block" above. Code blocks are simply sections contained within the keywords "begin" and "end." In the case of conditional evaluators, the opertors themselves act as "begin" statements, so they are not needed. Aditionally, the spacing of the evaluators is now important. The beginning of lines in each code block must be one tab in from the previous evaluator. You can, of course, use both comparison operators, and logical operators for evaluation.
+
+For example, if you want to determine whether the number 12 is bigger than 10 but smaller than 15, you might write:
+```
+if 12 < 10
+	print("Too Small!")
+
+elseif 12 > 15
+	print("Too Big!")
+
+else
+	print("Just Right!")
+
+end
+```
+However, you could also do this with logical operators, seen below:
+```
+if 12>10 && 12<15
+	print("Just Right!")
+end
+```
+"""
+
+# ╔═╡ 00000000-0000-0000-0000-000000000001
+PLUTO_PROJECT_TOML_CONTENTS = """
+[deps]
+"""
+
+# ╔═╡ 00000000-0000-0000-0000-000000000002
+PLUTO_MANIFEST_TOML_CONTENTS = """
+# This file is machine-generated - editing it directly is not advised
+
+julia_version = "1.7.3"
+manifest_format = "2.0"
+
+[deps]
+"""
 
 # ╔═╡ Cell order:
 # ╟─252cdc60-fdf3-11ec-3f07-0f3a49643d67
@@ -151,5 +272,15 @@ Below is an exercise to go over this information.
 # ╟─881e43f0-921c-4f5d-9716-17fabc1d52f7
 # ╟─1fb686c3-227e-46f3-9d6c-2e10fee82f1e
 # ╠═df05a4a7-66fd-4c7a-b22d-74a8c8ae6755
+# ╠═21d6f304-2f24-42bf-ac70-ac68a5f704a6
+# ╠═23f16fd5-7abf-4ea6-b22c-f67ec47f8531
+# ╠═982d4d67-c102-4dfb-a8d8-7f97719ee525
+# ╠═1781d90a-8c96-4169-9d15-dbdc38272df2
 # ╟─956405b2-611c-4fac-a620-313a8b27405d
 # ╠═7c8efad3-c8a8-4255-848b-98ab0f1dc505
+# ╠═a5e12d09-7f33-498e-b665-445b4c652b4c
+# ╟─3ea31749-e88f-4649-a59c-d8c9bd57f66b
+# ╟─6e593c4d-102b-4f35-a55f-eac79945ba32
+# ╟─111d3dff-6303-4ff7-8335-43aa333ec942
+# ╟─00000000-0000-0000-0000-000000000001
+# ╟─00000000-0000-0000-0000-000000000002
