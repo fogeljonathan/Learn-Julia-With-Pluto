@@ -72,7 +72,7 @@ Julia uses a hierarchical typing system. This means that for a given type, there
 
 For instance the type "Number" has subtype "Int"(Short for Integer) and supertype "Any".
 
-Some common types include
+Some common types include:
 
 Int : Integer - ex. 1
 
@@ -82,30 +82,68 @@ String : A string of letters or words - "Hello World"
 
 Bool : Either true or false, but can also be represented as 1 or 0
 
-nothing : The type to describe emptyness, has no values associated with it
+Nothing : The type to describe emptyness, has no values associated with it
 
 Array : A chart of data - ex.[1 2 3 ; 4 5 6] 
 
 Vector : An Array that is only 1 dimensional - ex. [1,2,3]
 
-Know that there are many different types in Julia, and it is possible to even create custom types, so this is not, by any means, a comprehensive list. 
+Know that there are many different types in Julia, and it is possible to even create custom types, so this is not, by any means, a comprehensive list.
+
+Julia has a built-in function, typeof(), which returns whatever data type the input is. For Example:
+
+```
+Julia> typeof("Descriptive Text")
+String
+
+Julia> typeof(10)
+Int64
+
+Julia> typeof(nothing)
+Nothing
+```
 
 Below are some exercises to showcase Julia typing.
 """
 
 # ╔═╡ df05a4a7-66fd-4c7a-b22d-74a8c8ae6755
+begin
+	# For the following, guess the type, and then remove the pound symbol and check the answer by running the cell.
 
+	#typeof(true)
+	#typeof(10.5)
+	#typeof(10.0)
+	#typeof(1+1)
+end
 
 # ╔═╡ 956405b2-611c-4fac-a620-313a8b27405d
 md"""
-## Defining  and Using Variables
+## Defining and Using Variables
 
-Next, we will learn to create and variables- a ubiquitous skill.
+Next, we will learn to create and variables- a crucial and ubiquitous skill.
 
-Julia makes variable definition extremely straightforward. Let's say you want to define
+Julia makes variable definition extremely straightforward. Let's say you want to define a variable to store the number of continents. The syntax is:
+```
+Julia> num_continents = 7
+```
+But what good is a variable if you can't use it? Luckily, Julia makes reading the variable just as easy.
+```
+Julia> num_continents
+7
+```
+Now say, for instance, a giant landmass appears in the middle of the sea. Besides total world crisis, that also has major implications on your continent count! We now have to add 1 to it.
 
-TO BE CONTINUED
+The syntax of this operation, and all the ways you could do it will be explained in a later notebook, but the following will do this or you. If you are new to programming, this may look unintuitive, but the way to think through it is that the right side of the equation will be fully completed, and then the variable on the left will be set to it.
+```
+Julia> num_continents = num_continents + 1
+Julia> num_continents
+8
+```
+Below is an exercise to go over this information.
 """
+
+# ╔═╡ 7c8efad3-c8a8-4255-848b-98ab0f1dc505
+
 
 # ╔═╡ Cell order:
 # ╟─252cdc60-fdf3-11ec-3f07-0f3a49643d67
@@ -113,4 +151,5 @@ TO BE CONTINUED
 # ╟─881e43f0-921c-4f5d-9716-17fabc1d52f7
 # ╟─1fb686c3-227e-46f3-9d6c-2e10fee82f1e
 # ╠═df05a4a7-66fd-4c7a-b22d-74a8c8ae6755
-# ╠═956405b2-611c-4fac-a620-313a8b27405d
+# ╟─956405b2-611c-4fac-a620-313a8b27405d
+# ╠═7c8efad3-c8a8-4255-848b-98ab0f1dc505
